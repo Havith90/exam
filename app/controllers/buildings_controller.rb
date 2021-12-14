@@ -54,7 +54,11 @@ class BuildingsController < ApplicationController
       format.html { redirect_to buildings_url, notice: "Building was successfully destroyed." }
       format.json { head :no_content }
     end
+  rescue 
+    flash[:building_destroy_error] = "Can't destroy #{@building.name} building"
+    redirect_to buildings_path
   end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
