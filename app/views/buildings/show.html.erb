@@ -18,9 +18,9 @@
 <h5>Apartments</h5>
 <ul>
 <% @building.apartments.each do |apartment| %>
-<li>
-  <%= link_to apartment.number, apartment_path(apartment) %>
-</li>
+  <li>
+    <%= link_to apartment.number, apartment_path(apartment) %>
+  </li>
 <% end %>
 </ul>
 
