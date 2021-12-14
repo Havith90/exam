@@ -13,10 +13,12 @@ class ApartmentsController < ApplicationController
   # GET /apartments/new
   def new
     @apartment = Apartment.new
+    @buildings = Building.select(:id, :name)
   end
 
   # GET /apartments/1/edit
   def edit
+    @buildings = Building.select(:id, :name)
   end
 
   # POST /apartments or /apartments.json
@@ -28,6 +30,7 @@ class ApartmentsController < ApplicationController
         format.html { redirect_to @apartment, notice: "Apartment was successfully created." }
         format.json { render :show, status: :created, location: @apartment }
       else
+        @buildings = Building.select(:id, :name)
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @apartment.errors, status: :unprocessable_entity }
       end
@@ -41,6 +44,7 @@ class ApartmentsController < ApplicationController
         format.html { redirect_to @apartment, notice: "Apartment was successfully updated." }
         format.json { render :show, status: :ok, location: @apartment }
       else
+        @buildings = Building.select(:id, :name)
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @apartment.errors, status: :unprocessable_entity }
       end
