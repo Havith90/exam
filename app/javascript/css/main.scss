@@ -1,12 +1,29 @@
 
-$primary: #000;
-$secondary: #4557;
+$primary:   #50cfc5;
+$secondary: #fb5607;
+$danger:    #ff006e;
+$success :  #8338ec;
+$warning :  #ffbe0b;
+$info:      #FEF9EF;
+$light:     #A8E7E9;
+$dark:      #3D087B; 
+$white:     #c4e2e6;
+
+
+
 
 
 @import '~bootstrap/scss/bootstrap';
 
 .btn{
     border-radius: 1rem;
+    color:  #FEF9EF;
+    background-color: $primary;
 }
+
+.btn-primary{
+    color: $white;
+}
+
 
 

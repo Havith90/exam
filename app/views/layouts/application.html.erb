@@ -12,6 +12,59 @@
   </head>
 
   <body>
-    <%= yield %>
+    <!--<div class="container">  -->
+
+    <!-- <nav class="navbar navbar-dark bg-dark">
+       Navbar content 
+    </nav> -->
+
+   <!-- <nav class="navbar navbar-dark bg-primary"> -->
+      <!-- Navbar content -->
+    <!-- </nav>
+
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;"> -->
+      <!-- Navbar content -->
+  <!-- </nav> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="row align-items-center w-100">
+            <div class="col-lg-2">
+                <a class="navbar-brand fs-3" href="/">Logo</a>
+            </div>
+
+        <div class="row align-items-center w-100">
+            <div class="col-lg-2">
+            <%= link_to "Buildings", buildings_path, class: "navbar-brand fs-3" %>
+            </div>
+
+        <div class="row align-items-center w-100">
+            <div class="col-lg-2">
+            <%= link_to "Apartments", apartments_path, class: "navbar-brand fs-3" %>
+            </div>
+
+
+            <div class="col-lg-8">
+                <%= form_with(method: :get) do |form| %>
+                    <%= form.text_field :search, class: 'form-control', placeholder: 'search' %>
+                    <% link_to buildings_path %> 
+                <% end %>
+            </div>
+        
+            <div class="col-lg-2 text-center">
+                <%= link_to buildings_path, class: 'text-decoration-none text-dark btn fs-5' do %>
+                    <%= @buildings.count %> 
+                    <i class="bi bi-building"></i> 
+                <% end %>
+            </div>
+
+        </div>
+    </div>
+  </nav>
+  
+      <%= yield %>
   </body>
 </html>
