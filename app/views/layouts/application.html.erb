@@ -1,70 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Exam</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <head>
+        <title>Exam</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-  <body>
-    <!--<div class="container">  -->
+        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
 
-    <!-- <nav class="navbar navbar-dark bg-dark">
-       Navbar content 
-    </nav> -->
-
-   <!-- <nav class="navbar navbar-dark bg-primary"> -->
-      <!-- Navbar content -->
-    <!-- </nav>
-
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd;"> -->
-      <!-- Navbar content -->
-  <!-- </nav> -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <div class="container-fluid">
+    <body>
     
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-        <div class="row align-items-center w-100">
-            <div class="col-lg-2">
-                <a class="navbar-brand fs-3" href="/">Logo</a>
-            </div>
+        <%= render "layouts/menu" %>
 
-        <div class="row align-items-center w-100">
-            <div class="col-lg-2">
-            <%= link_to "Buildings", buildings_path, class: "navbar-brand fs-3" %>
-            </div>
-
-        <div class="row align-items-center w-100">
-            <div class="col-lg-2">
-            <%= link_to "Apartments", apartments_path, class: "navbar-brand fs-3" %>
-            </div>
-
-
-            <div class="col-lg-8">
-                <%= form_with(method: :get) do |form| %>
-                    <%= form.text_field :search, class: 'form-control', placeholder: 'search' %>
-                    <% link_to buildings_path %> 
-                <% end %>
-            </div>
-        
-            <div class="col-lg-2 text-center">
-                <%= link_to buildings_path, class: 'text-decoration-none text-dark btn fs-5' do %>
-                    <%= @buildings.count %> 
-                    <i class="bi bi-building"></i> 
-                <% end %>
-            </div>
-
+        <div class="container">
+            <%= yield %>
         </div>
-    </div>
-  </nav>
-  
-      <%= yield %>
-  </body>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    </body>
 </html>

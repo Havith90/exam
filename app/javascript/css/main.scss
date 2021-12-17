@@ -1,5 +1,5 @@
 
-$primary:   #50cfc5;
+$primary:   #60ddc2;
 $secondary: #fb5607;
 $danger:    #ff006e;
 $success :  #8338ec;
@@ -7,7 +7,7 @@ $warning :  #ffbe0b;
 $info:      #FEF9EF;
 $light:     #A8E7E9;
 $dark:      #3D087B; 
-$white:     #c4e2e6;
+$white:     #fdffff;
 
 
 
@@ -25,5 +25,12 @@ $white:     #c4e2e6;
     color: $white;
 }
 
+a.btn-primary:visited{
+    color: $white !important;
+}
+
+a:hover {
+    background-color: #8338ec;
+}
 
 
