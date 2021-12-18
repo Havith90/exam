@@ -22,9 +22,9 @@ Buildings</h1>
         <td><%= building.name %></td>
         <td><%= building.address %></td>
         <td><%= building.city %></td>
-        <td><%= link_to 'Show', building %></td>
-        <td><%= link_to 'Edit', edit_building_path(building) %></td>
-        <td><%= link_to 'Destroy', building, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', building, class: 'btn btn-primary btn-small' %></td>
+        <td><%= link_to 'Edit', edit_building_path(building), class: 'btn btn-primary btn-small' %></td>
+        <td><%= link_to 'Destroy', building, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary btn-small' %></td>
       </tr>
     <% end %>
   </tbody>
